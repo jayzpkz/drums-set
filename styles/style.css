@@ -1,10 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 img {
   object-fit: contain;
+  -webkit-user-drag: none; /* Safari */
+  user-drag: none; /* Standard syntax */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
 }
 
 .main_container {
@@ -42,12 +48,33 @@ img {
 .drum_contaimer {
   padding: 1.5vw;
   background-color: #2e2c2c6c;
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.drum_contaimer:hover {
+  background-color: #2e2c2c9c;
+  transform: scale(0.9);
+}
+
+.key {
+  position: absolute;
+  font-size: 10vw;
+  color: #d81939;
+  line-height: 0.9;
+  text-shadow: 2px 2px 2px white;
+  font-weight: bold;
+  bottom: 2vw;
+  right: 2vw;
 }
 
 .drum {
   width: 25vw;
   height: 25vw;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .footer {
@@ -74,6 +101,12 @@ img {
   .top_row,
   .bottom_row {
     gap: 2vw;
+  }
+
+  .key {
+    font-size: 3.5vw;
+    bottom: 1vw;
+    right: 1vw;
   }
 
   .drum {
@@ -110,6 +143,13 @@ img {
 
   .drum_contaimer {
     padding: 1vw;
+  }
+
+  .key {
+    font-size: 4.5vw;
+    bottom: 0.5vw;
+    right: 0.5vw;
+    text-shadow: 4px 4px 4px white;
   }
 
   .drum {
